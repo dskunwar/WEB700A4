@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WEB700</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="/css/theme.css" rel="stylesheet" type="text/css"/>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Dilip Singh Kunwar</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="/htmlDemo">Html Demo</a></li>
+					<li class="nav-item"><a class="nav-link" href="/students/add">Add Student</a></li>
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="/students">Students</a></li>
+					<li class="nav-item"><a class="nav-link" href="/tas">Teaching Assistants</a></li>
+					<li class="nav-item"><a class="nav-link" href="/courses">Courses</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+				<main class="col-md-12">
+
+
+
+					<!-- Start your code here -->
+					<article>
+						<br><h4>Welcome to my website, I will be using HTML5 principles and techniques to create this website.</h4>
+						<br><h1><u>Introduction to this website:</u></h1>
+						<br><h5>This site consists of 3 static views (Home, About, HTML Demo) as well as 5 routes that supply data , including: All Students, Students by Course, A Single Student By Student Number, All TAs and All Courses.</h5>
+					</article>
+					<article>
+						<br><h5>Below are the different GET request maintained for different URLs</h5>
+						<table border="1">
+							<thead>
+								<tr>
+									<th>GET</th>
+									<th>URL Example</th>
+									<th>Details</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>/</td>
+									<td>http://localhost:8080</td>
+									<td>Home page of the website</td>
+								</tr>
+								<tr>
+									<td>/about</td>
+									<td>http://localhost:8080/about</td>
+									<td>About page of the website which contains useful information about it</td>
+								</tr>
+								<tr>
+									<td>/htmlDemo</td>
+									<td>http://localhost:8080/htmlDemo</td>
+									<td>Demo page of the website</td>
+								</tr>
+								<tr>
+									<td>/students</td>
+									<td>http://localhost:8080/students</td>
+									<td>This route will return a JSON formatted string containing all of the students resolved from the getAllStudents function</td>
+								</tr>
+								<tr>
+									<td>/students?course=value</td>
+									<td>http://localhost:8080/students?course=6</td>
+									<td>Return a JSON string consisting of all students where value could be one of 1, 2, 3, … 7 (there are currently 7 courses in the dataset) " - this is accomplished by calling the getStudentsByCourse(course) function of collegeData.js</td>
+								</tr>
+								<tr>
+									<td>/tas</td>
+									<td>http://localhost:8080/tas</td>
+									<td>This route will return a JSON formatted string containing all of the 'Teaching Assistants' resolved from the getTAs function.</td>
+								</tr>
+								<tr>
+									<td>/courses</td>
+									<td>http://localhost:8080/courses</td>
+									<td>This route will return a JSON formatted string containing all of the courses resolved from the getCourses function</td>
+								</tr>
+								<tr>
+									<td>/student/:num</td>
+									<td>http://localhost:8080/student/5</td>
+									<td>This route will return a JSON formatted string containing a single student whose studentNum property matches the num parameter in the route i.e. Student with ID 5 in the example case.</td>
+								</tr>
+							</tbody>
+						</table>
+					</article>
+					<article>
+						<br><br><h4>HTML 5 Short Introduction</h4>
+						<h6>HTML5 is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and final[3] major HTML version that is a World Wide Web Consortium (W3C) recommendation. The current specification is known as the HTML Living Standard. It is maintained by the Web Hypertext Application Technology Working Group (WHATWG), a consortium of the major browser vendors (Apple, Google, Mozilla, and Microsoft).</h6>
+						<h5>Reference: <a href = "https://en.wikipedia.org/wiki/HTML5" target="_blank">https://en.wikipedia.org/wiki/HTML5</a></h5>
+					</article> 
+					
+					<!-- End your code here  -->
+
+
+
+				</main>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>
