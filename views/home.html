@@ -75,7 +75,10 @@
 								<tr>
 									<td>/students?course=value</td>
 									<td>http://localhost:8080/students?course=6</td>
-									<td>Return a JSON string consisting of all students where value could be one of 1, 2, 3, … 7 (there are currently 7 courses in the dataset) " - this is accomplished by calling the getStudentsByCourse(course) function of collegeData.js</td>
+									<td>
+										Return a JSON string consisting of all students where value could be one of 1, 2, 3, … 7 (there are currently 7 courses in the dataset) " - this is accomplished by calling the getStudentsByCourse(course) function of collegeData.js
+										<br><br>One of the way of sending data from the client to the server is in the query string. If you send data for a user using a url like /user?user=bob then you can access that username with req.query.user. ‘query’ will be an object with key value pairs matching the key value pairs sent in the query string of the request.
+									</td>
 								</tr>
 								<tr>
 									<td>/tas</td>
@@ -90,7 +93,10 @@
 								<tr>
 									<td>/student/:num</td>
 									<td>http://localhost:8080/student/5</td>
-									<td>This route will return a JSON formatted string containing a single student whose studentNum property matches the num parameter in the route i.e. Student with ID 5 in the example case.</td>
+									<td>
+										This route will return a JSON formatted string containing a single student whose studentNum property matches the num parameter in the route i.e. Student with ID 5 in the example case.
+										<br><br>The third way of sending data is in the url. You can have one route which can accept an infinite number of requests with different user names and dynamically handle / access each differing username through req.params (ie: request.params.student).
+									</td>
 								</tr>
 							</tbody>
 						</table>

@@ -130,6 +130,7 @@ let addStudent = function(studentData){
         else{
             TA=false
         }
+        studentData.course = +studentData.course;
         var addData = {
             "studentNum": (dataCollection.students.length+1),
             "firstName": studentData.firstName,
